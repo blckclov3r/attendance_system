@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/colorPrimary"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:alpha=".2"
+        android:src="@drawable/graduate"
+        android:scaleType="fitXY"
+        android:layout_width="match_parent"
+        android:layout_height="330dp" />
+
+    <ScrollView
+        android:id="@+id/layout_scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:id="@+id/header_relativeLayout"
+            android:layout_marginTop="120dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/myLogo"
+                android:src="@drawable/timemanagement"
+                android:layout_centerHorizontal="true"
+                android:layout_width="265dp"
+                android:scaleType="fitXY"
+                android:layout_height="248dp" />
+
+            <TextView
+                android:id="@+id/projectTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:fontFamily="monospace"
+                android:layout_below="@id/myLogo"
+                android:gravity="center"
+                android:textColor="#fff"
+                android:text="X Attendance"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:text="@string/splash_screen"
+                android:textColor="#fff"
+                android:fontFamily="sans-serif-light"
+                android:textStyle="bold"
+                android:layout_marginEnd="7dp"
+                android:layout_marginTop="7dp"
+                android:layout_marginStart="7dp"
+                android:layout_below="@id/projectTitle"
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <ImageView
+        android:id="@+id/myLogo_imageView"
+        android:src="@drawable/mylogo"
+        android:layout_toLeftOf="@id/signature"
+        android:layout_above="@id/sourceCode_bitbucket"
+        android:layout_width="40dp"
+        android:layout_centerHorizontal="true"
+        android:layout_height="40dp" />
+
+    <ImageView
+        android:id="@+id/signature"
+        android:layout_above="@id/sourceCode_bitbucket"
+        android:src="@drawable/signature_x"
+        android:layout_centerHorizontal="true"
+        android:layout_width="140dp"
+        android:layout_height="50dp" />
+
+
+    <TextView
+        android:id="@+id/sourceCode_bitbucket"
+        android:textColor="#eee"
+        android:layout_above="@id/licenseTxtView"
+        android:layout_centerHorizontal="true"
+        android:text="https://www.bitbucket.com/blckclov3r"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/licenseTxtView"
+        android:text="This Application is licensed under the MIT License"
+        android:textColor="#ccc"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="40dp"
+        android:gravity="center"
+        android:fontFamily="sans-serif-light"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</RelativeLayout>

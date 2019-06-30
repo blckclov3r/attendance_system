@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3B526B</color>
+    <color name="colorPrimaryDark">#2C3D4E</color>
+    <color name="colorAccent">#006699</color>
+    <color name="dark_x">#343339</color>
+    <color name="maroon_passion">#A3241D</color>
+    <color name="corn_yellow">#F6D37A</color>
+    <color name="tuna">#F58C61</color>
+
+    <color name="transparent">#fff</color>
+    <color name="custom_header_text">#333</color>
+
+    <color name="calendar_active_month_bg">#fff5f7f9</color>
+    <color name="calendar_bg">#34495E</color>
+    <color name="calendar_divider">#333</color>
+    <color name="calendar_inactive_month_bg">#ffd7d9db</color>
+    <color name="calendar_selected_day_bg">#006699</color>
+    <color name="calendar_highlighted_day_bg">#ff96caff</color>
+    <color name="calendar_selected_range_bg">#ff96caff</color>
+    <color name="calendar_text_inactive">#40778088</color>
+    <color name="calendar_text_active">#ccc</color>
+    <color name="calendar_text_selected">#ffffffff</color>
+    <color name="calendar_text_unselectable">#7f778088</color>
+
+    <color name="dark_blue">#3023AE</color>
+    <color name="purple">#c86dd7</color>
+    <color name="login_form_details">#ccffffff</color>
+    <color name="login_form_details_light">#1affffff</color>
+    <color name="login_form_details_medium">#66ffffff</color>
+
+    <color name="one_">#6200EE</color>
+    <color name="two_">#F4511E</color>
+    <color name="three_">#4188FF</color>
+    <color name="four_">#A3241D</color>
+
+    <color name="dark">#333</color>
+</resources>

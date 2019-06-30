@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "934632504844",
+    "firebase_url": "https://nodemcu-2f215.firebaseio.com",
+    "project_id": "nodemcu-2f215",
+    "storage_bucket": "nodemcu-2f215.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:934632504844:android:c3864f036ff60e0f",
+        "android_client_info": {
+          "package_name": "com.example.blckclov3r.arduino_firebase_nodemcu"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "934632504844-2eoelcu65pa34d73alruafdjti2264ln.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.blckclov3r.arduino_firebase_nodemcu",
+            "certificate_hash": "8ea49add686aaad1870e211fd328859c017a3dec"
+          }
+        },
+        {
+          "client_id": "934632504844-lnbhtd0jfitf8cgtm18dn60strm48h1u.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBIOdIQL7_YMgMlEYFp8_1rgHr-2k84iUc"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "934632504844-lnbhtd0jfitf8cgtm18dn60strm48h1u.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

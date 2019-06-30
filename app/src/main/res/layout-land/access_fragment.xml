@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/bg_x"
+    android:layout_height="match_parent">
+
+
+    <ProgressBar
+        android:id="@+id/accessFragment_progressBar"
+        style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:indeterminate="true"
+        android:layout_marginTop="2dp"
+        android:textAlignment="center" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="5dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/accessFragment_progressBar">
+
+        <ImageView
+            android:id="@+id/accessFullScreen_imageView"
+            android:src="@drawable/ic_fullscreen"
+            android:layout_width="60dp"
+            android:layout_marginTop="60dp"
+            android:layout_height="80dp" />
+        <LinearLayout
+            android:id="@+id/roomSpinner"
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:layout_marginTop="4dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+
+            <com.chivorn.smartmaterialspinner.SmartMaterialSpinner
+                android:id="@+id/access_roomSpinner"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                app:smsp_underlineColor="#fff"
+                app:smsp_arrowColor="#fff"
+                app:smsp_hint="Selected course"
+                app:smsp_hintColor="#fff"
+                app:smsp_floatingLabelColor="#fff"
+                app:smsp_isReSelectable="true"
+                app:smsp_itemColor="#fff"
+                app:smsp_itemListColor="#333"
+                app:smsp_itemListHintBackgroundColor="#fff"
+                app:smsp_itemListHintColor="#FFFFFF"
+                app:smsp_multilineError="false"
+                app:smsp_searchHeaderBackgroundColor="@color/colorAccent"
+                app:smsp_searchHeaderText="Schedule Code Search"
+                app:smsp_searchHint="Search..."
+                app:smsp_selectedItemListColor="#1E438F" />
+
+            <ImageView
+                android:id="@+id/access_roomSearch"
+                android:layout_width="28dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="5dp"
+                android:src="@drawable/search_x" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_below="@id/roomSpinner"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="30dp"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:id="@+id/student_imageView_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:padding="4dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+
+                android:gravity="center">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/student_imageView"
+                        android:layout_width="150dp"
+                        android:layout_height="169dp"
+                        android:src="@drawable/person" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="7dp"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical">
+                        <TextView
+                            android:id="@+id/fname_textView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text=" XXXXX "
+                            android:textColor="#fff"
+                            android:textSize="20dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Name"
+                            android:textColor="#ccc"
+                            android:textSize="14dp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/course_textView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:text=" XXXX "
+                            android:textColor="#fff"
+                            android:textSize="20dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Program / Course"
+                            android:textColor="#ccc"
+                            android:textSize="14dp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/android_dateTime_textView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:text=" XXXXX "
+                            android:textColor="#fff"
+                            android:textSize="20dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Time &amp; Date Access"
+                            android:textSize="14dp"
+                            android:textColor="#ccc"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+
+
+    </RelativeLayout>
+</RelativeLayout>

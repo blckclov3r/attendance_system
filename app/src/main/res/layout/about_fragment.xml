@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:animationCache="true"
+    android:drawingCacheQuality="auto"
+    android:layout_height="match_parent">
+
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:contentScrim="#006699"
+            app:layout_scrollFlags="scroll|snap|exitUntilCollapsed"
+            app:title="About">
+
+            <RelativeLayout
+                android:background="#006699"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/dashboard"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Lorem Ipsum"
+                    android:textColor="#fff"
+                    android:textSize="24dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/dashboard"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginBottom="7dp"
+                    android:justificationMode="inter_word"
+                    android:text="@string/about"
+                    android:textColor="#ccc" />
+
+
+            </RelativeLayout>
+
+            <!--<android.support.v7.widget.Toolbar-->
+            <!--android:layout_width="match_parent"-->
+            <!--app:popupTheme="@style/ThemeOverlay.AppCompat.Dark"-->
+            <!--android:layout_height="?attr/actionBarSize">-->
+            <!--</android.support.v7.widget.Toolbar>-->
+
+        </android.support.design.widget.CollapsingToolbarLayout>
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="30dp"
+        android:backgroundTint="@color/transparent"
+        android:src="@drawable/teacher_b"
+        app:layout_anchor="@+id/appBarLayout"
+        app:layout_anchorGravity="bottom|right|end" />
+
+
+
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/nestedScroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_x"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ProgressBar
+                android:id="@+id/about_progressBar"
+                style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:indeterminate="true" />
+
+            <RelativeLayout
+                android:layout_marginTop="10dp"
+                android:padding="10dp"
+                android:id="@+id/relativeRecycler"
+                android:layout_below="@id/about_progressBar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/aboutRecyclerView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/signatureLayout"
+                android:layout_marginTop="2dp"
+                android:layout_width="match_parent"
+                android:layout_below="@id/relativeRecycler"
+                android:gravity="center"
+                android:layout_height="wrap_content">
+               <ImageView
+                   android:src="@drawable/signature_x"
+                   android:layout_width="120dp"
+                   android:scaleType="fitXY"
+                   android:layout_height="50dp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_below="@+id/signatureLayout"
+                android:layout_width="match_parent"
+                android:layout_marginTop="4dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/x"
+                    android:layout_centerHorizontal="true"
+                    android:layout_width="wrap_content"
+                    android:text="This Application is licensed under the MIT License"
+                    android:textColor="#fff"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:layout_below="@id/x"
+                    android:id="@+id/y"
+                    android:layout_centerHorizontal="true"
+                    android:layout_width="wrap_content"
+                    android:text="facebook.com/blckclov3r"
+                    android:textColor="#fff"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:layout_below="@id/y"
+                    android:id="@+id/z"
+                    android:layout_centerHorizontal="true"
+                    android:layout_width="wrap_content"
+                    android:text="instagram.com/blckclov3r"
+                    android:textColor="#fff"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:layout_below="@id/z"
+                    android:layout_centerHorizontal="true"
+                    android:layout_width="wrap_content"
+                    android:text="blckclov3r@gmail.com"
+                    android:textColor="#fff"
+                    android:layout_height="wrap_content" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+
+
+
+    </android.support.v4.widget.NestedScrollView>
+
+
+
+</android.support.design.widget.CoordinatorLayout>

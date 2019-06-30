@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/bg_x"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:contentScrim="#006699"
+            app:layout_scrollFlags="scroll|snap|exitUntilCollapsed"
+            app:title="Student List">
+
+            <RelativeLayout
+                android:background="#006699"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/dashboard"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Students"
+                    android:textColor="#fff"
+                    android:textSize="24dp" />
+
+
+                <EditText
+                    android:background="@drawable/bg_et"
+                    android:layout_alignParentEnd="true"
+                    android:textColor="#fff"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:textColorHint="#ccc"
+                    android:drawableEnd="@drawable/ic_search"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="10dp"
+                    android:imeOptions="flagNoExtractUi"
+                    android:inputType="textPersonName"
+                    android:hint="Search Enrollee Name. . ."
+                    android:id="@+id/studentSearch"
+                    android:layout_width="250dp"
+                    android:maxLength="13"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/dashboard"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginBottom="7dp"
+                    android:justificationMode="inter_word"
+                    android:text="@string/student_list"
+                    android:textColor="#ccc" />
+
+
+            </RelativeLayout>
+
+            <!--<android.support.v7.widget.Toolbar-->
+            <!--android:layout_width="match_parent"-->
+            <!--app:popupTheme="@style/ThemeOverlay.AppCompat.Dark"-->
+            <!--android:layout_height="?attr/actionBarSize">-->
+            <!--</android.support.v7.widget.Toolbar>-->
+
+        </android.support.design.widget.CollapsingToolbarLayout>
+    </android.support.design.widget.AppBarLayout>
+
+
+    <!--<android.support.design.widget.FloatingActionButton-->
+        <!--android:id="@+id/fab"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginEnd="30dp"-->
+        <!--android:backgroundTint="@android:color/transparent"-->
+        <!--android:scaleType="fitXY"-->
+        <!--android:src="@drawable/search_b"-->
+        <!--app:layout_anchor="@+id/appBarLayout"-->
+        <!--app:layout_anchorGravity="bottom|right|end" />-->
+
+
+    <RelativeLayout
+        android:id="@+id/nestedScroll"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_x"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <ProgressBar
+            android:id="@+id/studentlist_progressBar"
+            style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"
+            android:indeterminate="true"
+            android:backgroundTint="#fff"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+       <LinearLayout
+           android:layout_below="@id/studentlist_progressBar"
+           android:orientation="vertical"
+           android:layout_width="match_parent"
+           android:layout_height="match_parent">
+
+           <android.support.v7.widget.RecyclerView
+               android:id="@+id/studentlist_recyclerView"
+               android:layout_width="match_parent"
+               android:layout_height="match_parent" />
+
+
+       </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+
+
+</android.support.design.widget.CoordinatorLayout>

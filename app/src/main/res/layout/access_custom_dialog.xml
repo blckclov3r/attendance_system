@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:contentPadding="3dp"
+    app:cardElevation="2dp"
+    app:cardBackgroundColor="#ccc"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:background="@color/colorPrimary"
+        android:layout_width="wrap_content"
+        android:layout_gravity="center"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/header_textView"
+                android:text="ACCESS AS OBSERVER"
+                android:textColor="#eee"
+                android:layout_marginTop="4dp"
+                android:fontFamily="monospace"
+                android:textSize="16dp"
+                android:gravity="center"
+                android:layout_centerHorizontal="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <EditText
+                android:layout_marginTop="4dp"
+                android:id="@+id/input_editText"
+                android:textColor="#fff"
+                android:hint="Enter your passcode"
+                android:textColorHint="#eee"
+                android:layout_below="@id/header_textView"
+                android:inputType="textPassword"
+                android:drawableEnd="@drawable/hide_a"
+                android:background="@drawable/bg_et"
+                android:textSize="16dp"
+                android:maxLength="15"
+                android:layout_width="380dp"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/cancel_textView"
+                android:layout_alignLeft="@id/input_editText"
+                android:layout_below="@id/input_editText"
+                android:textSize="18dp"
+                android:padding="4dp"
+                android:layout_marginTop="8dp"
+                android:text="Cancel"
+                android:background="@drawable/btn_bg"
+                android:textColor="#fff"
+                android:layout_marginBottom="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/ok_textView"
+                android:layout_below="@+id/input_editText"
+                android:layout_alignRight="@+id/input_editText"
+                android:text="   Ok   "
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:textColor="#fff"
+                android:textSize="18dp"
+                android:padding="4dp"
+                android:background="@drawable/btn_bg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+
+        </RelativeLayout>
+
+</android.support.v7.widget.CardView>

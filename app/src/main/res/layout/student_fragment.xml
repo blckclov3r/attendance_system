@@ -1,0 +1,370 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_x">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:contentScrim="@color/colorPrimary"
+            app:layout_scrollFlags="scroll|snap|exitUntilCollapsed"
+            app:title="+Student">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#006699">
+
+
+                <TextView
+                    android:id="@+id/dashboard"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="10dp"
+                    android:text="+ Student"
+                    android:textColor="#fff"
+                    android:textSize="24dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/dashboard"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginBottom="7dp"
+                    android:justificationMode="inter_word"
+                    android:text="@string/add_student"
+                    android:textColor="#ccc" />
+            </RelativeLayout>
+
+            <!--<android.support.v7.widget.Toolbar-->
+            <!--android:layout_width="match_parent"-->
+            <!--app:popupTheme="@style/ThemeOverlay.AppCompat.Dark"-->
+            <!--android:layout_height="?attr/actionBarSize">-->
+            <!--</android.support.v7.widget.Toolbar>-->
+
+        </android.support.design.widget.CollapsingToolbarLayout>
+    </android.support.design.widget.AppBarLayout>
+
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ProgressBar
+                android:id="@+id/progress_horizontal"
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/progress_horizontal"
+                android:layout_marginTop="4dp"
+                android:layout_marginStart="7dp"
+                android:layout_marginEnd="7dp"
+                android:paddingBottom="10dp">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="333dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="8dp"
+                            android:src="@drawable/ic_vpn_key" />
+
+                        <EditText
+                            android:id="@+id/uid_editText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/bg_et"
+                            android:gravity="center"
+                            android:hint="Student ID"
+                            android:imeOptions="flagNoExtractUi"
+                            android:inputType="textPersonName"
+                            android:maxLength="13"
+                            android:textColor="#fff"
+                            android:textColorHint="#ccc"
+                            android:textSize="17dp" />
+
+                        <ImageView
+                            android:id="@+id/checkUid"
+                            android:layout_width="28dp"
+                            android:layout_height="30dp"
+                            android:layout_marginStart="2dp"
+                            android:src="@drawable/search_x" />
+                    </LinearLayout>
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/studentfragment_circleImageView"
+                        android:layout_width="150dp"
+                        android:layout_height="169dp"
+                        android:layout_marginTop="7dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/person" />
+
+
+
+
+                    <com.chivorn.smartmaterialspinner.SmartMaterialSpinner
+                        android:id="@+id/schedCode_spinner"
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        app:smsp_underlineColor="#fff"
+                        app:smsp_arrowColor="#fff"
+                        app:smsp_hint="Selected course"
+                        app:smsp_hintColor="#fff"
+                        app:smsp_floatingLabelColor="#fff"
+                        app:smsp_isReSelectable="true"
+                        app:smsp_itemColor="#fff"
+                        app:smsp_itemListColor="#333"
+                        app:smsp_itemListHintBackgroundColor="#fff"
+                        app:smsp_itemListHintColor="#FFFFFF"
+                        app:smsp_multilineError="false"
+                        app:smsp_searchHeaderBackgroundColor="@color/colorAccent"
+                        app:smsp_searchHeaderText="Schedule Code Search"
+                        app:smsp_searchHint="Search..."
+                        app:smsp_selectedItemListColor="#1E438F" />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:layout_gravity="center"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_person" />
+
+                        <EditText
+                            android:id="@+id/firstName_editText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/bg_et"
+                            android:hint="Firstname"
+                            android:imeOptions="flagNoExtractUi"
+                            android:inputType="textPersonName"
+                            android:maxLength="20"
+                            android:textColor="#fff"
+                            android:textColorHint="#ccc"
+                            android:textSize="17dp" />
+
+                        <EditText
+                            android:id="@+id/lastName_editText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="2dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/bg_et"
+                            android:hint="Lastname"
+                            android:imeOptions="flagNoExtractUi"
+                            android:inputType="textPersonName"
+                            android:maxLength="20"
+                            android:textColor="#fff"
+                            android:textColorHint="#ccc"
+                            android:textSize="17dp" />
+
+                        <EditText
+                            android:id="@+id/middleName_editText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="2dp"
+                            android:layout_weight=".1"
+                            android:background="@drawable/bg_et"
+                            android:hint="MI"
+                            android:imeOptions="flagNoExtractUi"
+                            android:inputType="textPersonName"
+                            android:maxLength="2"
+                            android:textColor="#fff"
+                            android:textColorHint="#ccc"
+                            android:textSize="17dp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="4dp">
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_description" />
+
+                        <EditText
+                            android:id="@+id/course_editText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/bg_et"
+                            android:hint="Course"
+                            android:imeOptions="flagNoExtractUi"
+                            android:inputType="textPersonName"
+                            android:maxLength="32"
+                            android:textColor="#fff"
+                            android:textColorHint="#ccc"
+                            android:textSize="17dp" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="4dp">
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_equalizer" />
+
+                        <EditText
+                            android:id="@+id/year_editText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/bg_et"
+                            android:hint="Year Level"
+                            android:imeOptions="flagNoExtractUi"
+                            android:inputType="textPersonName"
+                            android:maxLength="13"
+                            android:textColor="#fff"
+                            android:textColorHint="#ccc"
+                            android:textSize="17dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="4dp">
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_local_phone" />
+
+                        <EditText
+                            android:id="@+id/contact_editText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/bg_et"
+                            android:hint="Contact Number"
+                            android:imeOptions="flagNoExtractUi"
+                            android:inputType="phone"
+                            android:maxLength="13"
+                            android:textColor="#fff"
+                            android:textColorHint="#ccc"
+                            android:textSize="17dp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp">
+
+                        <ImageView
+                            android:id="@+id/dob_imageView"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_date_range" />
+
+                        <EditText
+                            android:id="@+id/dob_editText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/bg_et"
+                            android:hint="Date of Birth"
+                            android:imeOptions="flagNoExtractUi"
+                            android:inputType="textPersonName"
+                            android:maxLength="20"
+                            android:textColor="#fff"
+                            android:textColorHint="#ccc"
+                            android:textSize="17dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="4dp">
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_location" />
+
+                        <EditText
+                            android:id="@+id/address_editText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bg_et"
+                            android:hint="Address"
+                            android:imeOptions="flagNoExtractUi"
+                            android:maxLength="99"
+                            android:textColor="#fff"
+                            android:textColorHint="#ccc"
+                            android:textSize="17dp" />
+                    </LinearLayout>
+
+
+                    <Button
+                        android:id="@+id/insert_studentBtn"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:fontFamily="monospace"
+                        android:text="Submit"
+                        android:textAllCaps="false" />
+                </LinearLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+
+</android.support.design.widget.CoordinatorLayout>

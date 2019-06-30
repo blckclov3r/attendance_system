@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorPrimaryDark"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/mToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="6dp"
+        android:layout_marginBottom="2dp"
+        android:gravity="center_horizontal">
+
+        <RelativeLayout
+            android:id="@+id/studentInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_horizontal">
+
+            <TextView
+                android:id="@+id/calendar_fullName_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:fontFamily="sans-serif-light"
+                android:textStyle="bold"
+                android:text="Fullname"
+                android:textColor="#fff" />
+
+            <TextView
+                android:id="@+id/calendar_uid_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/calendar_fullName_textView"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:fontFamily="sans-serif-light"
+                android:textStyle="bold"
+                android:text="uid"
+                android:textColor="#ffff" />
+
+            <TextView
+                android:id="@+id/calendar_subject_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:fontFamily="sans-serif-light"
+                android:textStyle="bold"
+                android:layout_below="@id/calendar_uid_textView"
+                android:text="Subject"
+                android:textColor="#fff" />
+
+            <TextView
+                android:id="@+id/calendar_schedCode_textView"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:fontFamily="sans-serif-light"
+                android:textStyle="bold"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/calendar_subject_textView"
+                android:text="Schedule Code"
+                android:textColor="#fff" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/studentInfo">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/calendar_imageView"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="10dp"
+                android:src="@drawable/person" />
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+
+    <ProgressBar
+        android:id="@+id/pirAttendance_progressBar"
+        style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:indeterminate="true" />
+
+
+    <com.squareup.timessquare.CalendarPickerView
+        android:id="@+id/pir_attendance_cal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+
+</LinearLayout>
+

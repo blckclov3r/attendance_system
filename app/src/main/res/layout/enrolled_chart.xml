@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:contentScrim="@color/colorPrimary"
+            app:layout_scrollFlags="scroll|snap|snapMargins|exitUntilCollapsed|enterAlways"
+            app:title="About">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#006699">
+
+                <TextView
+                    android:id="@+id/dashboard"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Chart"
+                    android:textColor="#fff"
+                    android:textSize="24dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/dashboard"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginBottom="7dp"
+                    android:justificationMode="inter_word"
+                    android:text="@string/pie_chart"
+                    android:textColor="#ccc" />
+            </RelativeLayout>
+
+            <!--<android.support.v7.widget.Toolbar-->
+            <!--android:layout_width="match_parent"-->
+            <!--app:popupTheme="@style/ThemeOverlay.AppCompat.Dark"-->
+            <!--android:layout_height="?attr/actionBarSize">-->
+            <!--</android.support.v7.widget.Toolbar>-->
+
+        </android.support.design.widget.CollapsingToolbarLayout>
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:src="@drawable/analysis_b"
+        app:layout_anchor="@+id/appBarLayout"
+        android:layout_width="wrap_content"
+        android:backgroundTint="@android:color/transparent"
+        app:layout_anchorGravity="bottom|right|end"
+        app:fabSize="auto"
+        android:layout_marginEnd="30dp"
+        android:layout_height="wrap_content" />
+
+
+
+    <RelativeLayout
+        android:background="@drawable/bg_x"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+
+        <ProgressBar
+            android:id="@+id/pieChart_progressBar"
+            style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:indeterminate="true"
+            android:layout_height="wrap_content" />
+
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_below="@id/pieChart_progressBar"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/thisYear"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="7dp"
+                    android:fontFamily="sans-serif-light"
+                    android:textColor="#fff"
+                    android:paddingTop="4dp"
+                    android:paddingBottom="4dp"
+                    android:text="# of Student Enrolled this year: " />
+
+                <TextView
+                    android:id="@+id/year_textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/thisYear"
+                    android:paddingTop="4dp"
+                    android:paddingBottom="4dp"
+                    android:textColor="#fff" />
+            <RelativeLayout
+                android:layout_below="@id/thisYear"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <com.github.mikephil.charting.charts.PieChart
+                    android:id="@+id/enrolled_pieChart"
+                    android:layout_width="360dp"
+                    android:layout_height="370dp"
+                    android:layout_centerHorizontal="true"/>
+            </RelativeLayout>
+
+            </RelativeLayout>
+        </android.support.v4.widget.NestedScrollView>
+
+    </RelativeLayout>
+</android.support.design.widget.CoordinatorLayout>

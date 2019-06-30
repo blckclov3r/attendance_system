@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/bg_x"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:id="@+id/appBarLayout"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:layout_height="wrap_content">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            app:layout_scrollFlags="scroll|snap|snapMargins|exitUntilCollapsed"
+            app:contentScrim="@color/colorPrimary"
+            app:title="About"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:background="#006699"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/dashboard"
+                    android:text="Search"
+                    android:textSize="24dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="15dp"
+                    android:textColor="#fff"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:text="@string/room_search"
+                    android:layout_below="@id/dashboard"
+                    android:justificationMode="inter_word"
+                    android:layout_marginRight="15dp"
+                    android:textColor="#ccc"
+                    android:layout_marginBottom="7dp"
+                    android:layout_marginLeft="50dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </RelativeLayout>
+
+            <!--<android.support.v7.widget.Toolbar-->
+            <!--android:layout_width="match_parent"-->
+            <!--app:popupTheme="@style/ThemeOverlay.AppCompat.Dark"-->
+            <!--android:layout_height="?attr/actionBarSize">-->
+            <!--</android.support.v7.widget.Toolbar>-->
+
+        </android.support.design.widget.CollapsingToolbarLayout>
+    </android.support.design.widget.AppBarLayout>
+
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ProgressBar
+                android:id="@+id/roomSearch_progressBar"
+                style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="header" />
+
+            <LinearLayout
+                android:layout_marginTop="4dp"
+                android:id="@+id/searchLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/roomSearch_progressBar"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/roomSearch_schedCode_editText"
+                    android:layout_width="280dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_et"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:textSize="17dp"
+                    android:textColor="#fff"
+                    android:drawableStart="@drawable/ic_date_range"
+                    android:textColorHint="#ccc"
+                    android:hint="Schedule Code" />
+
+                <ImageView
+                    android:id="@+id/roomSearch_okBtn"
+                    android:layout_width="28dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="5dp"
+                    android:src="@drawable/search_x"
+                    android:text="Ok" />
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/roomSearch_roomCode_textView"
+                android:layout_marginTop="20dp"
+                android:layout_width="wrap_content"
+                android:textColor="#fff"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/searchLayout"
+                android:text="  Room Code  "
+                android:drawableStart="@drawable/ic_account_balance"
+               android:gravity="bottom" />
+
+            <TextView
+                android:id="@+id/roomSearch_subjectCode_textView"
+                android:layout_width="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_centerHorizontal="true"
+                android:textColor="#fff"
+                android:gravity="bottom"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_credit"
+                android:layout_below="@id/roomSearch_roomCode_textView"
+                android:text="  Subject Code"
+             />
+
+            <TextView
+                android:id="@+id/roomSearch_unit_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#fff"
+                android:layout_marginTop="5dp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/roomSearch_subjectCode_textView"
+                android:text="  Subject Unit  "
+                android:gravity="bottom"
+                android:drawableStart="@drawable/ic_equalizer"
+           />
+
+            <TextView
+                android:id="@+id/roomSearch_term_textView"
+                android:layout_width="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:textColor="#fff"
+                android:gravity="bottom"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/roomSearch_unit_textView"
+                android:drawableStart="@drawable/ic_timeline"
+                android:text="  Term              "
+           />
+
+            <TextView
+                android:id="@+id/roomSearch_weekday_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:textColor="#fff"
+                android:layout_below="@id/roomSearch_term_textView"
+                android:drawableStart="@drawable/ic_event_busy"
+                android:text="  Weekday     "
+               android:gravity="bottom" />
+
+            <TextView
+                android:id="@+id/roomSearch_startTime_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/roomSearch_weekday_textView"
+                android:drawableStart="@drawable/ic_timer"
+                android:text="  Start Time   "
+                android:textColor="#fff"
+               android:gravity="bottom" />
+
+            <TextView
+                android:id="@+id/roomSearch_endTime_textView"
+                android:layout_marginTop="5dp"
+                android:layout_centerHorizontal="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/roomSearch_startTime_textView"
+                android:text="  End Time     "
+                android:drawableStart="@drawable/ic_timer_off"
+                android:textColor="#fff"
+                android:gravity="bottom" />
+            <RelativeLayout
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:layout_below="@id/roomSearch_endTime_textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <Button
+                    android:id="@+id/roomSearch_removeBtn"
+                    android:drawableStart="@drawable/ic_close"
+                    android:layout_marginEnd="10dp"
+                    android:layout_width="wrap_content"
+                    android:text="Remove"
+                    android:textAllCaps="false"
+                    android:layout_height="wrap_content" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+
+</android.support.design.widget.CoordinatorLayout>

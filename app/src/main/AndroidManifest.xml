@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.blckclov3r.arduino_firebase_nodemcu">
+
+    <uses-permission android:name="android.permission.BODY_SENSORS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:hardwareAccelerated="true"
+        android:icon="@drawable/sevendp"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:roundIcon="@drawable/sevendp"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning">
+
+        <activity
+            android:name=".SplashScreen.SplashScreen_Activity"
+            android:configChanges="screenSize|keyboardHidden|orientation"
+            android:label="@string/app_name"
+            android:singleUser="true"
+            android:hardwareAccelerated="true"
+            android:theme="@style/AppTheme.NoActionBar"
+            tools:ignore="InnerclassSeparator">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".ActivityPackage.MainActivity"
+            android:largeHeap="true"
+            android:launchMode="singleTop"
+            android:turnScreenOn="true"
+            android:hardwareAccelerated="true"
+            android:singleUser="true"
+            android:configChanges="screenSize|keyboardHidden|orientation"
+            android:windowSoftInputMode="stateHidden"
+            tools:ignore="InnerclassSeparator" />
+
+        <activity
+            android:name=".Home_Fragment_Package.RoomData.RoomList_Data_Activity"
+            android:configChanges="screenSize|keyboardHidden|orientation"
+            android:largeHeap="true"
+            android:windowSoftInputMode="stateHidden"
+            tools:ignore="InnerclassSeparator" />
+        <activity
+            android:name=".Home_Fragment_Package.StudentData.StudentRoomActivity"
+            android:configChanges="screenSize|keyboardHidden|orientation"
+            android:largeHeap="true"
+            android:windowSoftInputMode="stateHidden"
+            tools:ignore="InnerclassSeparator" />
+        <activity
+            android:name=".Home_Fragment_Package.StudentData.StudentInfoActivity"
+            android:configChanges="screenSize|keyboardHidden|orientation"
+            android:largeHeap="true"
+            android:windowSoftInputMode="stateHidden"
+            tools:ignore="InnerclassSeparator" />
+        <activity
+            android:name=".Home_Fragment_Package.StudentData.StudentInfoAttendaceActivity"
+            android:configChanges="screenSize|keyboardHidden|orientation"
+            android:largeHeap="true"
+            android:windowSoftInputMode="stateHidden"
+            tools:ignore="InnerclassSeparator" />
+
+        <activity android:name=".Home_Fragment_Package.StudentData.PirAttendanceActivity"
+            android:configChanges="screenSize|keyboardHidden|orientation"
+            android:largeHeap="true"
+            tools:ignore="InnerclassSeparator"/>
+        <activity android:name=".Home_Fragment_Package.StudentData.RecyclerView.pirDetectionListActivity"
+            android:configChanges="screenSize|keyboardHidden|orientation"
+            android:largeHeap="true"
+            tools:ignore="InnerclassSeparator" />
+        <activity android:name=".Home_Fragment_Package.StudentData.RecyclerView.doorAccessListActivity"
+            android:configChanges="screenSize|keyboardHidden|orientation"
+            android:largeHeap="true"
+            tools:ignore="InnerclassSeparator" />
+        <activity android:name=".Home_Fragment_Package.AccessFS.AccessActivity_FullScreen"
+            android:configChanges="screenSize|keyboardHidden|orientation"
+            android:largeHeap="true"
+            tools:ignore="InnerclassSeparator" />
+    </application>
+
+</manifest>

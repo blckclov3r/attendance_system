@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="12dp"
+    android:outlineAmbientShadowColor="@color/colorPrimary"
+    android:outlineSpotShadowColor="#333"
+    app:contentPadding="4dp"
+    android:layout_marginTop="6dp"
+    android:layout_marginStart="7dp"
+    android:layout_marginEnd="7dp"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:padding="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/custom_subjectCode_textView"
+            android:text="Room"
+            android:textColor="@color/dark_x"
+            android:textSize="16sp"
+            android:fontFamily="sans-serif-light"
+            android:ellipsize="end"
+            android:textStyle="bold"
+            android:layout_width="match_parent"
+            android:layout_marginEnd="6dp"
+            android:layout_toStartOf="@id/custom_schedCode_textView"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/custom_schedCode_textView"
+            android:text="ScheduleCode"
+            android:layout_alignParentEnd="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/custom_weekday_textView"
+            android:text="Weekday"
+            android:layout_below="@id/custom_schedCode_textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/custom_startTime_textView"
+            android:layout_below="@id/custom_weekday_textView"
+            android:text="Start Time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/custom_endTime_textView"
+            android:layout_width="match_parent"
+            android:layout_below="@id/custom_startTime_textView"
+            android:text="End Time"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+</android.support.design.card.MaterialCardView>

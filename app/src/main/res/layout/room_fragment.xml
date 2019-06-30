@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/bg_x"
+    android:orientation="vertical">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:id="@+id/appBarLayout"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:layout_height="wrap_content">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            app:layout_scrollFlags="scroll|snap|snapMargins|exitUntilCollapsed"
+            app:contentScrim="@color/colorPrimary"
+            app:title="About"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:background="#006699"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+
+                <TextView
+                    android:id="@+id/dashboard"
+                    android:text="+ Room"
+                    android:textSize="24dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="15dp"
+                    android:textColor="#fff"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:text="@string/add_room"
+                    android:layout_below="@id/dashboard"
+                    android:justificationMode="inter_word"
+                    android:layout_marginRight="15dp"
+                    android:paddingBottom="7dp"
+                    android:textColor="#ccc"
+                    android:layout_marginLeft="50dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </RelativeLayout>
+
+            <!--<android.support.v7.widget.Toolbar-->
+            <!--android:layout_width="match_parent"-->
+            <!--app:popupTheme="@style/ThemeOverlay.AppCompat.Dark"-->
+            <!--android:layout_height="?attr/actionBarSize">-->
+            <!--</android.support.v7.widget.Toolbar>-->
+
+        </android.support.design.widget.CollapsingToolbarLayout>
+    </android.support.design.widget.AppBarLayout>
+
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ProgressBar
+                android:id="@+id/roomFragment_progressBar"
+                style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"
+                android:indeterminate="false"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="10dp">
+
+                    <EditText
+                        android:id="@+id/schedCode_editText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:imeOptions="flagNoExtractUi"
+                        android:background="@drawable/bg_et"
+                        android:hint="Schedule Code"
+                        android:inputType="textPersonName"
+                        android:textColor="#fff"
+                        android:textColorHint="#ccc"
+                        android:maxLength="32"
+                        android:drawableEnd="@drawable/ic_subject"
+                        android:textSize="17dp" />
+
+                    <EditText
+                        android:id="@+id/roomCode_editText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:imeOptions="flagNoExtractUi"
+                        android:inputType="textPersonName"
+                        android:background="@drawable/bg_et"
+                        android:maxLength="20"
+                        android:hint="Room Code"
+                        android:drawableEnd="@drawable/ic_account_balance"
+                        android:textColor="#fff"
+                        android:textColorHint="#ccc"
+                        android:textSize="17dp" />
+
+                    <EditText
+                        android:id="@+id/subjectCode"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/bg_et"
+                        android:hint="Subject Code"
+                        android:imeOptions="flagNoExtractUi"
+                        android:drawableEnd="@drawable/ic_credit"
+                        android:textColor="#fff"
+                        android:maxLength="32"
+                        android:inputType="textPersonName"
+                        android:textColorHint="#ccc"
+                        android:textSize="17dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:gravity="center"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp">
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:src="@drawable/ic_event_busy" />
+                        <Spinner
+                            android:id="@+id/term_spinner"
+                            android:layout_width="250dp"
+                            android:layout_marginStart="2dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/input_backgrnd" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:gravity="center"
+                        android:layout_width="match_parent"
+                        android:layout_marginStart="20dp"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:text="Term"
+                            android:textColor="#ccc"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:src="@drawable/ic_equalizer" />
+
+                        <Spinner
+                            android:id="@+id/subjectUnit_spinner"
+                            android:layout_width="250dp"
+                            android:layout_marginStart="2dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/input_backgrnd" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:gravity="center"
+                        android:layout_marginStart="20dp"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:text="Unit"
+                            android:textColor="#ccc"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:src="@drawable/ic_date_range" />
+
+                        <Spinner
+                            android:id="@+id/weekDay_spinner"
+                            android:layout_width="250dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="2dp"
+                            android:background="@drawable/input_backgrnd" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:gravity="center">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Weekday"
+                            android:textColor="#ccc" />
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_marginTop="5dp"
+                        android:layout_width="match_parent"
+                        android:orientation="vertical"
+                        android:layout_marginBottom="15dp"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:gravity="center"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:id="@+id/startTime_imageView"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/ic_timer" />
+                            <TextView
+                                android:id="@+id/time_start"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Time Start"
+                                android:background="@drawable/bg_et"
+                                android:padding="8dp"
+                                android:layout_marginStart="2dp"
+                                android:textColor="#eee"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:gravity="center"
+                            android:layout_marginTop="5dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <ImageView
+                                android:id="@+id/endTime_imageView"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/ic_timer_off" />
+
+
+                            <TextView
+                                android:id="@+id/time_end"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text=" Time End "
+                                android:background="@drawable/bg_et"
+                                android:padding="8dp"
+                                android:textColor="#eee"
+                                android:layout_marginStart="2dp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <Button
+                        android:id="@+id/room_insertBtn"
+                        android:layout_width="200dp"
+                        android:layout_marginStart="12dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="12dp"
+                        android:textColor="#333"
+                        android:layout_height="wrap_content"
+                        android:text="Submit"
+                        android:textAllCaps="false"
+                        />
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+
+
+</android.support.design.widget.CoordinatorLayout>

@@ -1,0 +1,532 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@drawable/bg_x"
+    android:layout_height="match_parent">
+
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/mToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark" />
+
+
+            <RelativeLayout
+                android:background="#006699"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/dashboard"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Information"
+                    android:textColor="#fff"
+                    android:textSize="21dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/dashboard"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginBottom="7dp"
+                    android:justificationMode="inter_word"
+                    android:text="@string/student_info"
+                    android:textColor="#ccc" />
+
+
+            </RelativeLayout>
+
+            <!--<android.support.v7.widget.Toolbar-->
+            <!--android:layout_width="match_parent"-->
+            <!--app:popupTheme="@style/ThemeOverlay.AppCompat.Dark"-->
+            <!--android:layout_height="?attr/actionBarSize">-->
+            <!--</android.support.v7.widget.Toolbar>-->
+
+    </android.support.design.widget.AppBarLayout>
+
+    <!--<android.support.design.widget.FloatingActionButton-->
+    <!--android:id="@+id/fab"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginEnd="30dp"-->
+    <!--android:backgroundTint="@color/transparent"-->
+    <!--android:src="@drawable/ic_android"-->
+    <!--app:layout_anchor="@+id/appBarLayout"-->
+    <!--app:layout_anchorGravity="bottom|right|end" />-->
+
+    <RelativeLayout
+        android:id="@+id/nestedScroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_x"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <ProgressBar
+            android:id="@+id/studentInfo_progressBar"
+            style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"
+            android:indeterminate="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_below="@+id/studentInfo_progressBar"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <RelativeLayout
+                    android:layout_marginBottom="12dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <RelativeLayout
+                        android:id="@+id/layout_one"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:layout_marginTop="10dp"
+                            android:id="@+id/attendance_studentInfo_imageView"
+                            android:layout_width="40dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginEnd="10dp"
+                            android:src="@drawable/calendar_e"
+                            android:tooltipText="Access Logs"
+                            android:layout_height="40dp" />
+                        <TextView
+                            android:layout_alignParentRight="true"
+                            android:layout_marginEnd="10dp"
+                            android:textColor="#eee"
+                            android:layout_below="@id/attendance_studentInfo_imageView"
+                            android:textSize="10dp"
+                            android:text="Access Cal."
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                        <ImageView
+                            android:layout_alignParentEnd="true"
+                            android:src="@drawable/unlocked_d"
+                            android:layout_marginTop="26dp"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp" />
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:id="@+id/layout_two"
+                        android:layout_below="@id/layout_one"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:id="@+id/attendance_doorLockList_imageView"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginEnd="10dp"
+                            android:tooltipText="Access Logs"
+                            android:layout_marginTop="34dp"
+                            android:src="@drawable/list_x"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp" />
+                        <TextView
+                            android:layout_below="@id/attendance_doorLockList_imageView"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginEnd="10dp"
+                            android:textSize="10dp"
+                            android:textColor="#eee"
+                            android:text="Access Logs"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                        <ImageView
+                            android:layout_alignParentEnd="true"
+                            android:src="@drawable/unlocked_d"
+                            android:layout_marginTop="50dp"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp" />
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:id="@+id/layout_three"
+                        android:layout_width="match_parent"
+                        android:layout_below="@id/layout_two"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:id="@+id/pir_list_imageView"
+                            android:src="@drawable/list_z"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginEnd="10dp"
+                            android:layout_marginTop="34dp"
+                            android:layout_width="40dp"
+                            android:tooltipText="Pir Logs"
+                            android:layout_height="40dp" />
+                        <TextView
+                            android:layout_below="@id/pir_list_imageView"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginEnd="10dp"
+                            android:textColor="#eee"
+                            android:textSize="10dp"
+                            android:text="PIR Logs"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                        <ImageView
+                            android:layout_alignParentEnd="true"
+                            android:src="@drawable/sensor_a"
+                            android:layout_marginTop="50dp"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp" />
+                    </RelativeLayout>
+
+
+
+                    <RelativeLayout
+                        android:id="@+id/layout_four"
+                        android:layout_below="@id/layout_three"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:id="@+id/pir_calendar_imageView"
+                            android:src="@drawable/calendar_p"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginEnd="10dp"
+                            android:tooltipText="Pir Calendar"
+                            android:layout_marginTop="34dp"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp" />
+
+                        <TextView
+                            android:layout_below="@id/pir_calendar_imageView"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginEnd="10dp"
+                            android:textColor="#eee"
+                            android:text="PIR Cal."
+                            android:textSize="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                        <ImageView
+                            android:layout_alignParentEnd="true"
+                            android:src="@drawable/sensor_a"
+                            android:layout_marginTop="50dp"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp" />
+                    </RelativeLayout>
+
+
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/student_info_imageView"
+                        android:src="@drawable/person"
+                        android:layout_width="150dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_height="169dp" />
+
+
+                    <TextView
+                        android:id="@+id/uid_studentInfo_textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:textColor="#fff"
+                        android:layout_marginTop="2dp"
+                        android:singleLine="true"
+                        android:ellipsize="end"
+                        android:fontFamily="sans-serif-light"
+                        android:textStyle="bold"
+                        android:gravity="bottom"
+                        android:drawableStart="@drawable/ic_vpn_key"
+                        android:layout_below="@id/student_info_imageView"
+                        android:text="student id" />
+
+                    <LinearLayout
+                        android:id="@+id/fullName_linearLayout"
+                        android:layout_below="@+id/uid_studentInfo_textView"
+                        android:layout_width="match_parent"
+                        android:gravity="center"
+                        android:layout_marginTop="5dp"
+                        android:orientation="horizontal"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:drawableStart="@drawable/ic_person"
+                            android:id="@+id/firstName_studentInfo_textView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="#fff"
+                            android:singleLine="true"
+                            android:ellipsize="end"
+                            android:fontFamily="sans-serif-light"
+                            android:textStyle="bold"
+                            android:gravity="bottom"
+                            android:layout_marginEnd="8dp"
+                            android:layout_below="@id/uid_studentInfo_textView"
+                            android:text="Firstname" />
+
+                        <TextView
+                            android:id="@+id/middleName_studentInfo_textView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="#fff"
+                            android:layout_marginEnd="8dp"
+                            android:singleLine="true"
+                            android:ellipsize="end"
+                            android:fontFamily="sans-serif-light"
+                            android:textStyle="bold"
+                            android:layout_gravity="bottom"
+                            android:layout_below="@id/firstName_studentInfo_textView"
+                            android:text="middleName" />
+
+                        <TextView
+                            android:id="@+id/lastName_studentInfo_textView"
+                            android:singleLine="true"
+                            android:ellipsize="end"
+                            android:fontFamily="sans-serif-light"
+                            android:textStyle="bold"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="#fff"
+                            android:layout_gravity="bottom"
+                            android:layout_below="@id/middleName_studentInfo_textView"
+                            android:text="LastName" />
+                    </LinearLayout>
+
+
+                    <TextView
+                        android:id="@+id/course_studentInfo_textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:textColor="#fff"
+                        android:layout_marginTop="5dp"
+                        android:singleLine="true"
+                        android:ellipsize="end"
+                        android:fontFamily="sans-serif-light"
+                        android:textStyle="bold"
+                        android:gravity="bottom"
+                        android:drawableStart="@drawable/ic_description"
+                        android:layout_below="@id/fullName_linearLayout"
+                        android:text="Course" />
+
+                    <TextView
+                        android:id="@+id/year_studentInfo_textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:textColor="#fff"
+                        android:layout_marginTop="5dp"
+                        android:gravity="bottom"
+                        android:singleLine="true"
+                        android:ellipsize="end"
+                        android:fontFamily="sans-serif-light"
+                        android:textStyle="bold"
+                        android:drawableStart="@drawable/ic_timeline"
+                        android:layout_below="@id/course_studentInfo_textView"
+                        android:text="Year" />
+
+                    <TextView
+                        android:id="@+id/dob_studentInfo_textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:textColor="#eee"
+                        android:drawableStart="@drawable/ic_date_range"
+                        android:layout_marginTop="5dp"
+                        android:gravity="bottom"
+                        android:singleLine="true"
+                        android:ellipsize="end"
+                        android:fontFamily="sans-serif-light"
+                        android:textStyle="bold"
+                        android:layout_below="@id/year_studentInfo_textView"
+                        android:text="Date of Birth" />
+
+                    <TextView
+                        android:id="@+id/address_studentInfo_textView"
+                        android:layout_width="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:textColor="#fff"
+                        android:layout_marginTop="5dp"
+                        android:singleLine="true"
+                        android:ellipsize="end"
+                        android:fontFamily="sans-serif-light"
+                        android:textStyle="bold"
+                        android:gravity="bottom"
+                        android:drawableStart="@drawable/ic_location"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/dob_studentInfo_textView"
+                        android:text="Address" />
+
+                    <TextView
+                        android:id="@+id/contact_studentInfo_textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:singleLine="true"
+                        android:ellipsize="end"
+                        android:fontFamily="sans-serif-light"
+                        android:textStyle="bold"
+                        android:textColor="#fff"
+                        android:drawableStart="@drawable/ic_local_phone"
+                        android:gravity="bottom"
+                        android:layout_marginTop="5dp"
+                        android:layout_below="@id/address_studentInfo_textView"
+                        android:text="Contact Number" />
+
+                    <TextView
+                        android:id="@+id/schedCode_studentInfo_textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:textColor="#fff"
+                        android:drawableStart="@drawable/ic_subject"
+                        android:singleLine="true"
+                        android:ellipsize="end"
+                        android:fontFamily="sans-serif-light"
+                        android:textStyle="bold"
+                        android:layout_marginTop="4dp"
+                        android:gravity="bottom"
+                        android:layout_below="@id/contact_studentInfo_textView"
+                        android:text="Schedule Code" />
+
+                    <TextView
+                        android:id="@+id/subjectCode_studentInfo_textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:textColor="#fff"
+                        android:singleLine="true"
+                        android:ellipsize="end"
+                        android:fontFamily="sans-serif-light"
+                        android:textStyle="bold"
+                        android:drawableStart="@drawable/ic_account_balance"
+                        android:gravity="bottom"
+                        android:layout_marginTop="5dp"
+                        android:layout_below="@id/schedCode_studentInfo_textView"
+                        android:text="SubjectCode" />
+
+                    <TextView
+                        android:id="@+id/subjectUnit_studentInfo_textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:textColor="#fff"
+                        android:drawableStart="@drawable/ic_equalizer"
+                        android:gravity="bottom"
+                        android:singleLine="true"
+                        android:ellipsize="end"
+                        android:fontFamily="sans-serif-light"
+                        android:textStyle="bold"
+                        android:layout_marginTop="5dp"
+                        android:layout_below="@id/subjectCode_studentInfo_textView"
+                        android:text="Subject Unit" />
+
+                    <TextView
+                        android:id="@+id/term_studentInfo_textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:singleLine="true"
+                        android:ellipsize="end"
+                        android:fontFamily="sans-serif-light"
+                        android:textStyle="bold"
+                        android:textColor="#fff"
+                        android:drawableStart="@drawable/ic_event_busy"
+                        android:layout_marginTop="5dp"
+                        android:gravity="bottom"
+                        android:layout_below="@id/subjectUnit_studentInfo_textView"
+                        android:text="Term" />
+
+                    <TextView
+                        android:id="@+id/weekday_studentInfo_textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:textColor="#fff"
+                        android:gravity="bottom"
+                        android:drawableStart="@drawable/ic_date_range"
+                        android:layout_marginTop="5dp"
+                        android:singleLine="true"
+                        android:ellipsize="end"
+                        android:fontFamily="sans-serif-light"
+                        android:textStyle="bold"
+                        android:layout_below="@id/term_studentInfo_textView"
+                        android:text="Weekday" />
+
+                    <TextView
+                        android:id="@+id/startTime_studentInfo_textView"
+                        android:text="Start time"
+                        android:layout_below="@id/weekday_studentInfo_textView"
+                        android:layout_width="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:textColor="#eee"
+                        android:singleLine="true"
+                        android:ellipsize="end"
+                        android:fontFamily="sans-serif-light"
+                        android:textStyle="bold"
+                        android:drawableStart="@drawable/ic_timer"
+                        android:layout_marginTop="5dp"
+                        android:gravity="bottom"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/endTime_studentInfo_textView"
+                        android:text="End Time"
+                        android:layout_centerHorizontal="true"
+                        android:textColor="#fff"
+                        android:drawableStart="@drawable/ic_timer_off"
+                        android:layout_marginTop="5dp"
+                        android:gravity="bottom"
+                        android:singleLine="true"
+                        android:ellipsize="end"
+                        android:fontFamily="sans-serif-light"
+                        android:textStyle="bold"
+                        android:layout_below="@id/startTime_studentInfo_textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/dateaccess_studentInfo_textView"
+                        android:layout_below="@id/endTime_studentInfo_textView"
+                        android:text="Last Date Access"
+                        android:layout_centerHorizontal="true"
+                        android:textColor="#fff"
+                        android:drawableStart="@drawable/ic_check"
+                        android:singleLine="true"
+                        android:ellipsize="end"
+                        android:fontFamily="sans-serif-light"
+                        android:textStyle="bold"
+                        android:gravity="bottom"
+                        android:layout_marginTop="5dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </RelativeLayout>
+            </LinearLayout>
+        </android.support.v4.widget.NestedScrollView>
+
+
+
+    </RelativeLayout>
+
+
+
+
+
+</android.support.design.widget.CoordinatorLayout>

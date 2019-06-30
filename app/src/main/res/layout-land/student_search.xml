@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/bg_x"
+    >
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:id="@+id/appBarLayout"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:layout_height="wrap_content">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            app:layout_scrollFlags="scroll|snap|exitUntilCollapsed"
+            app:contentScrim="#006699"
+            app:title="About"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:background="#006699"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/dashboard"
+                    android:text="Search"
+                    android:textSize="24dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="15dp"
+                    android:textColor="#fff"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:text="@string/student_search"
+                    android:layout_below="@id/dashboard"
+                    android:justificationMode="inter_word"
+                    android:layout_marginRight="15dp"
+                    android:textColor="#ccc"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginBottom="7dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </RelativeLayout>
+
+            <!--<android.support.v7.widget.Toolbar-->
+            <!--android:layout_width="match_parent"-->
+            <!--app:popupTheme="@style/ThemeOverlay.AppCompat.Dark"-->
+            <!--android:layout_height="?attr/actionBarSize">-->
+            <!--</android.support.v7.widget.Toolbar>-->
+
+        </android.support.design.widget.CollapsingToolbarLayout>
+    </android.support.design.widget.AppBarLayout>
+
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ProgressBar
+                android:id="@+id/studentSearch_progressBar"
+                style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:indeterminate="true"
+                android:textAlignment="center" />
+
+            <RelativeLayout
+                android:layout_below="@id/studentSearch_progressBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_marginTop="4dp"
+                    android:id="@+id/input_linearLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/studentSearch_editText"
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        android:textSize="17dp"
+                        android:fontFamily="monospace"
+                        android:imeOptions="flagNoExtractUi"
+                        android:layout_marginStart="25dp"
+                        android:textColorHint="#ccc"
+                        android:drawableStart="@drawable/ic_vpn_key"
+                        android:textColor="#fff"
+                        android:gravity="center"
+                        android:background="@drawable/bg_et"
+                        android:hint="StudentID" />
+
+                    <ImageView
+                        android:id="@+id/studentSearch_search_imageView"
+                        android:layout_width="28dp"
+                        android:layout_marginStart="2dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/search_x" />
+
+                </LinearLayout>
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/studentSearch_image"
+                    android:layout_width="150dp"
+                    android:layout_height="169dp"
+                    android:layout_below="@id/input_linearLayout"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/person" />
+
+                <TextView
+                    android:id="@+id/studentSearch_fname_textView"
+                    android:layout_width="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/studentSearch_image"
+                    android:drawableStart="@drawable/ic_person"
+                    android:layout_marginTop="2dp"
+                    android:gravity="bottom"
+                    android:text="Full Name"
+                    android:textColor="#fff"
+                    />
+
+                <TextView
+                    android:id="@+id/studentSearch_course_textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@id/studentSearch_fname_textView"
+                    android:layout_marginTop="5dp"
+                    android:textColor="#fff"
+                    android:text="Course"
+                    android:drawableStart="@drawable/ic_description"
+                    android:gravity="bottom" />
+
+                <TextView
+                    android:id="@+id/studentSearch_year_textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/studentSearch_course_textView"
+                    android:textColor="#fff"
+                    android:drawableStart="@drawable/ic_equalizer"
+                    android:layout_marginTop="5dp"
+                    android:gravity="bottom"
+                    android:layout_centerHorizontal="true"
+                    android:text="Year" />
+
+                <TextView
+                    android:id="@+id/studentSearch_dob_textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/studentSearch_year_textView"
+                    android:layout_marginTop="5dp"
+                    android:textColor="#fff"
+                    android:layout_centerHorizontal="true"
+                    android:text="Date of Birth"
+                    android:gravity="bottom"
+                    android:drawableStart="@drawable/ic_date_range" />
+
+                <TextView
+                    android:id="@+id/studentSearch_address_textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/studentSearch_dob_textView"
+                    android:layout_marginTop="5dp"
+                    android:drawableStart="@drawable/ic_location"
+                    android:textColor="#fff"
+                    android:gravity="bottom"
+                    android:layout_centerHorizontal="true"
+                    android:text="Address" />
+
+                <TextView
+                    android:id="@+id/studentSearch_contact_textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/studentSearch_address_textView"
+                    android:layout_marginTop="5dp"
+                    android:text="Contact"
+                    android:textColor="#fff"
+                    android:gravity="bottom"
+                    android:drawableStart="@drawable/ic_local_phone"
+                    android:layout_centerHorizontal="true"
+                    />
+
+                <TextView
+                    android:id="@+id/studentSearch_lastDateAccess_textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/studentSearch_contact_textView"
+                    android:layout_marginTop="5dp"
+                    android:drawableStart="@drawable/ic_check"
+                    android:text="Date Access"
+                    android:textColor="#fff"
+                    android:gravity="bottom"
+                    android:layout_centerHorizontal="true"
+                    />
+
+                <Button
+                    android:id="@+id/student_search_removeBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:drawableStart="@drawable/ic_close"
+                    android:textColor="@color/colorPrimary"
+                    android:textAllCaps="false"
+                    android:textSize="18dp"
+                    android:layout_below="@id/studentSearch_lastDateAccess_textView"
+                    android:layout_marginTop="10dp"
+                    android:text="Remove" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+
+
+
+
+</android.support.design.widget.CoordinatorLayout>

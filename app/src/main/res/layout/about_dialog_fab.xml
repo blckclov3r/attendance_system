@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:padding="20dp"
+    android:background="@color/colorPrimary"
+    android:layout_height="wrap_content">
+
+
+    <RelativeLayout
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/link_textView"
+            android:layout_centerHorizontal="true"
+            android:text="Twitter/instagram : stephvillarubia"
+            android:textColor="#ccc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/miss"
+            android:src="@drawable/miss"
+            android:layout_below="@id/link_textView"
+            android:layout_width="210dp"
+            android:padding="10dp"
+            android:layout_height="230dp" />
+
+
+        <TextView
+            android:id="@+id/instructor_name"
+            android:layout_centerHorizontal="true"
+            android:text="Engr. Stephanie Grace Villarubia"
+            android:layout_below="@id/miss"
+            android:textColor="#eee"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/instructor_textView"
+            android:layout_below="@id/instructor_name"
+            android:layout_centerHorizontal="true"
+            android:text="Instructor"
+            android:textColor="#ccc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+</RelativeLayout>

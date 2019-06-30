@@ -1,0 +1,102 @@
+<resources>
+
+    <string name="app_name">Smart Attendance</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="lorem">Ullyetuk vh nequem iunhum fuhazatum yg. Wyzeul de niha iunhum nym en en. Ezes buabeleul ezes ozuk scepsegud syrou kunuel felleyn epedek num fuhazatum. Farad fyaal nequem. Hol ezes ere aniath mogomnok.
+        Kethwe bel bezzeg niha buol en syrolmom hullothya scepsegud bua. Mogomnok sydou niha thudothlon ualmun uilaga. Epedek scouuo. Wyzeul kyul therthetyk engumet werethul o. Urodum aniath halal scegegkel. Scouuo en walasth egembelu anyath sumha fyom buabeleul sydou halal. Ezes nequem kethwe niha kynaal en. Werethul farad fugwa. Syrolmol en fuhazatum felleyn eggen.
+        Scepsegud walasth thekunched keseruen scegegkel engumet merth sydou kyniuhhad egyre. Volek en scouuo wirud fyom volek buthuruth fuhazatum therthetyk kyul keguggethuk. Ne ulud urodum felleyn hioll fyodumtul leg. Owog the eses iumhumnok kunuel ezes volek anyath. Wyzeul urodum buthuruth owog.
+        Vylagumtul ere en erzem ulud fugwa. Kegulm eggedum owog engumet leg yg syrolmol en byuntelen sepedyk. Halal ualallal iumhumnok niha ulud hul felleyn buabeleul. En en nequem anyath maraggun. Myth wegh. Iunhum iunhum turuentelen ere keguggethuk felleyn bezzeg. Kyul ygoz bua fyodumtul egyre. Keguggethuk urodum num bua kyul. Arad eses symeonnok. Kyul sepedyk nym eggedum fuhazatum urodum. Wegh hyul therthetyk urodum de volek uos kyniuhhad the. Bua eses hol viragnac buol sydou buol thekunched. Kyul ygoz olelothya symeonnok owog kynaal. Kynzathul iumhumnok buthuruth egyre walasth. En yg egyre leg kyt kethwe halal. Ozuk eggen buabeleul en fyodum ualmun en therthetyk. Symeonnok vh sydou kyniuhhad en wylag kynzassal turuentelen urumemtuul aniath bezzeg. Fyon halallal fyaal syrolm en fyodum kegulm buabeleul fyaal wegh scouuo.
+        Owog volek uos scemem wklelue anyath. Bezzeg en en o walasth. Kynzassal bel kyul ezes fyomnok kunuel therthetyk aniath. Fyon bel fyaal. Ualmun iunhum urodum buabeleul kynzathul iunhum buabeleul merth sumha kegulm wyzeul. Kegulm aniath en fyomnok fyodumtul ualallal sydou bezzeg buol. O huztuzwa ozuk de niha halallal symeonnok eggedum hul. Buol thekunched en halallal niha en anyath kyth. Ulud fugwa fyodumtul o ygoz mezuul syrou wyzeul hullothya. Kynzassal wklelue o o yg. Ezes uilaga ere illen kethwe en turuentelen turuentelen hol. Hullothya epedek kyul fyom iunhum maraggun keguggethuk merth kyt kynzassal keguggethuk. Qui vylagumtul scouuo kyul epedek. Kegulm werud olelothya mezuul merth hul de mogomnok buol. Olelothya vylag. Keguggethuk en buol viragnac. Nym urumemtuul. Qui yg halal thez bel felleyn farad. Fyomnok fyom buol urodum en kegulm ualallal eses yg iunhum olelothya.
+    </string>
+
+    <string name="dashboard">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sapien urna, blandit eu urna in Dashboard.</string>
+    <string name="about">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sapien urna, blandit eu urna in About.</string>
+    <string name="access">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sapien urna, blandit eu urna in Access.</string>
+    <string name="add_room">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sapien urna, blandit eu urna in Room.</string>
+    <string name="add_student">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sapien urna, blandit eu urna in Student.</string>
+    <string name="pie_chart">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sapien urna, blandit eu urna in Pie Chart.</string>
+    <string name="room_search">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sapien urna, blandit eu urna in Search.</string>
+    <string name="student_search">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sapien urna, blandit eu urna in Search.</string>
+    <string name="student_list">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sapien urna, blandit eu urna in List.</string>
+    <string name="room_list">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sapien urna, blandit eu urna in List.</string>
+    <string name="student_update">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sapien urna, blandit eu urna in Update.</string>
+    <string name="student_room">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sapien urna, blandit eu urna in Subject.</string>
+    <string name="student_info">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sapien urna, blandit eu urna in Info.</string>
+    <string name="door_access_list">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sapien urna, blandit eu urna in Info.</string>
+    <string name="room_info">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sapgit add .ien urna, blandit eu urna in Room.</string>
+    <string name="pir_accesss_list">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sapgit add .ien urna, blandit eu urna in Pir.</string>
+    <string name="login">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sapgit add .ien urna, blandit eu urna in Login.</string>
+    <string name="splash_screen">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sapgit add .ien urna, blandit eu urna in SplashScreen.</string>
+    <string name="lorem_ipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sapien urna, blandit eu urna in, facilisis dapibus est.
+        Curabitur vulputate consequat mi ac ultricies.Mauris molestie turpis eu orci faucibus.</string>
+    <string name="lorem_ipsum_short">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sapien urna, blandit eu urna in.</string>
+
+    <string name="room_info_menu">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sapien urna, blandit eu urna in RoomInfo.</string>
+    <string name="student_room_menu">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sapien urna, blandit eu urna in Student Room.</string>
+    <string name="student_info_menu">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sapien urna, blandit eu urna in Student Info.</string>
+    <string name="student_pirAttendance_menu">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sapien urna, blandit eu urna in Date Access.</string>
+    <string name="door_access_list_menu">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sapien urna, blandit eu urna in Door Access List.</string>
+    <string name="student_attendance_menu">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sapien urna, blandit eu urna in Student Attendance Calendar.</string>
+    <string name="student_pir_detection_menu">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sapien urna, blandit eu urna in Pir Detection List.</string>
+
+    <string-array name="login_as">
+        <item>Administrator</item>
+        <item>Observer</item>
+    </string-array>
+
+    <string-array name="unit_array">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+    </string-array>
+
+    <string-array name="weekday_array">
+        <item>MON</item>
+        <item>MON-TUE</item>
+        <item>MON-WED</item>
+        <item>MON-THU</item>
+        <item>MON-FRI</item>
+        <item>MON-SAT</item>
+        <item>MON-SUN</item>
+
+        <item>TUE</item>
+        <item>TUE-WED</item>
+        <item>TUE-THU</item>
+        <item>TUE-FRI</item>
+        <item>TUE-SAT</item>
+        <item>TUE-SUN</item>
+
+        <item>WED </item>
+        <item>WED-FRI</item>
+        <item>WED-SAT</item>
+        <item>WED-SUN</item>
+
+        <item>THU</item>
+        <item>THU-SAT</item>
+        <item>THU-SUN</item>
+
+        <item>FRI</item>
+        <item>FRI-SAT</item>
+        <item>FRI-SUN</item>
+
+        <item>SAT</item>
+        <item>SAT-SUN</item>
+    </string-array>
+
+    <string-array name="sem_array">
+        <item>1</item>
+        <item>2</item>
+        <item>Summer</item>
+    </string-array>
+
+
+</resources>
+
