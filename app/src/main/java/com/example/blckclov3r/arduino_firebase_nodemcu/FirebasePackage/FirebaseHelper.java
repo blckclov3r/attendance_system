@@ -220,7 +220,6 @@ public class FirebaseHelper {
                 arrayAdapter.notifyDataSetChanged();
             }
         } catch (Exception e) {
-            ToastError(e.getMessage());
             Log.e(COMMON_TAG, TAG + ", fetchSchedCodeData() Exception: " + e.getMessage());
         }
     }
@@ -734,7 +733,6 @@ public class FirebaseHelper {
             }
         } catch (Exception e) {
             Log.e(COMMON_TAG, TAG + ", insertStudent() Exception: " + e.getMessage());
-            ToastError(e.getMessage());
             return false;
         }
         return true;
@@ -790,7 +788,6 @@ public class FirebaseHelper {
                     }
                 } catch (Exception e) {
                     Log.e(COMMON_TAG, TAG + ", retrieveAccessFragment Exception: " + e.getMessage());
-                    ToastError(e.getMessage());
                 }
             }
 
@@ -1173,7 +1170,6 @@ public class FirebaseHelper {
 
                     }
                 } catch (Exception e) {
-                    ToastError(e.getMessage());
                     Log.e(COMMON_TAG, TAG + " student search: " + e.getMessage());
                 }
             }

@@ -124,7 +124,7 @@ public class RoomFragment extends Fragment {
         mTimestart_tv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(SystemClock.elapsedRealtime() - mLastClickTime < 1000){
+                if (SystemClock.elapsedRealtime() - mLastClickTime < 1000) {
                     return;
                 }
                 mLastClickTime = SystemClock.elapsedRealtime();
@@ -132,7 +132,7 @@ public class RoomFragment extends Fragment {
                     @SuppressLint({"DefaultLocale", "SetTextI18n"})
                     @Override
                     public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
-                        String amPm ="";
+                        String amPm = "";
                         if (hourOfDay >= 12) {
                             f_mMinute = minute;
                             f_mHour = hourOfDay;
@@ -182,7 +182,7 @@ public class RoomFragment extends Fragment {
         mTimeend_tv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(SystemClock.elapsedRealtime() - mLastClickTime < 1000){
+                if (SystemClock.elapsedRealtime() - mLastClickTime < 1000) {
                     return;
                 }
                 mLastClickTime = SystemClock.elapsedRealtime();
@@ -238,11 +238,12 @@ public class RoomFragment extends Fragment {
         mStarttime_imageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(SystemClock.elapsedRealtime() - mLastClickTime < 1000) {
+                if (SystemClock.elapsedRealtime() - mLastClickTime < 1000) {
                     return;
                 }
                 mLastClickTime = SystemClock.elapsedRealtime();
                 timePickerDialog = new TimePickerDialog(getActivity(), new TimePickerDialog.OnTimeSetListener() {
+                    @SuppressLint({"DefaultLocale", "SetTextI18n"})
                     @Override
                     public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
                         String amPm = "";
@@ -296,7 +297,7 @@ public class RoomFragment extends Fragment {
         mEndtime_imageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(SystemClock.elapsedRealtime() - mLastClickTime < 1000) {
+                if (SystemClock.elapsedRealtime() - mLastClickTime < 1000) {
                     return;
                 }
                 mLastClickTime = SystemClock.elapsedRealtime();
@@ -354,7 +355,7 @@ public class RoomFragment extends Fragment {
         mRoom_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(SystemClock.elapsedRealtime() - mLastClickTime < 1000) {
+                if (SystemClock.elapsedRealtime() - mLastClickTime < 1000) {
                     return;
                 }
                 mLastClickTime = SystemClock.elapsedRealtime();
@@ -373,33 +374,37 @@ public class RoomFragment extends Fragment {
                     mSchedCode.setFocusable(true);
                     mSchedCode.setError("Don't leave this field empty");
                     return;
-                }if (room.isEmpty()) {
+                }
+                if (room.isEmpty()) {
                     mProgressbar.setProgress(0);
                     mRoomCode.setFocusable(true);
                     mRoomCode.setError("Don't leave this field empty");
                     return;
-                }if (subject.isEmpty()) {
+                }
+                if (subject.isEmpty()) {
                     mProgressbar.setProgress(0);
                     ToastInfo("Don't leave this field empty");
                     mSubjectCode.setFocusable(true);
                     mSubjectCode.setError("Don't leave this field empty");
                     return;
-                }if (start.equals("Time Start")) {
+                }
+                if (start.equals("Time Start")) {
                     mProgressbar.setProgress(0);
                     ToastInfo("Please specify the time start");
                     return;
-                }if (end.equals("Time End")) {
+                }
+                if (end.equals("Time End")) {
                     mProgressbar.setProgress(0);
                     ToastInfo("Please specify the time end");
                     return;
                 }
                 RoomModel roomModel = new RoomModel(sched.toUpperCase(), room, subject, thisterm, unit, start, end, wday);
                 //f_mHour -> x_fmHour
-                if (mFirebasedatabaseHelper.insertRoomSched(sched, roomModel,String.valueOf(x_fmHour),String.valueOf(f_mMinute),String.valueOf(l_mHour),String.valueOf(l_mMinute))) {
+                if (mFirebasedatabaseHelper.insertRoomSched(sched, roomModel, String.valueOf(x_fmHour), String.valueOf(f_mMinute), String.valueOf(l_mHour), String.valueOf(l_mMinute))) {
                     String mydate_time = DateFormat.getDateTimeInstance().format(Calendar.getInstance().getTime());
                     LogModel logModel = new LogModel();
                     logModel.setLogMsg("+Room successfully Created [+Room]");
-                    logModel.setLogAccess("Access date &amp; time: "+mydate_time);
+                    logModel.setLogAccess("Access date &amp; time: " + mydate_time);
                     mDatabaseReference.child("AppLog").push().setValue(logModel);
                     ToastInfo("+Room successfully created");
                     new Handler().postDelayed(new Runnable() {
@@ -409,12 +414,7 @@ public class RoomFragment extends Fragment {
                         }
                     }, 1200);
                 } else {
-                    new Handler().postDelayed(new Runnable() {
-                        @Override
-                        public void run() {
-                            mProgressbar.setProgress(0);
-                        }
-                    }, 1200);
+                    mProgressbar.setProgress(0);
                     ToastInfo("Check you internet connection, or ask the system administrator");
                     return;
                 }
@@ -433,6 +433,7 @@ public class RoomFragment extends Fragment {
     private void Toast(String s) {
         Toasty.normal(contex, s, Toast.LENGTH_SHORT).show();
     }
+
     private void ToastSuccess(String s) {
         Toasty.success(contex, s, Toast.LENGTH_SHORT).show();
     }
@@ -449,15 +450,14 @@ public class RoomFragment extends Fragment {
     @Override
     public void onDestroy() {
         super.onDestroy();
-        Log.d(COMMON_TAG,TAG+" onDestroy");
+        Log.d(COMMON_TAG, TAG + " onDestroy");
     }
 
     @Override
     public void onDetach() {
         super.onDetach();
-        Log.d(COMMON_TAG,TAG+" onDetach");
+        Log.d(COMMON_TAG, TAG + " onDetach");
     }
-
 
 
 }
