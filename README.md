@@ -30,7 +30,7 @@
 * Can't enter when the subject has not started.
 * 30 minutes passed, auto generated as late .
 * 1 hr. or greater are unable to enter.
-* Login Support for authorized user.
+* Login authorization support.
 * ETC.
 
 ## Security
