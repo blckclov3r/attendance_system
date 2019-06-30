@@ -25,11 +25,12 @@
 </p>
 
 ## Feature
-* Realtime Access (Online)
+* Realtime Access (Online).
 * Auto-generated attendance and logs.
 * Can't enter when the subject has not started.
 * 30 minutes passed, auto generated as late .
 * 1 hr. or greater are unable to enter.
+* Login Support for authorized user.
 * ETC.
 
 ## Security

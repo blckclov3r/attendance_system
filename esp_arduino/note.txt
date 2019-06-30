@@ -1,0 +1,11 @@
++-------------------------------------------------------------------+
+|  Arduino Esp8266 Board Manager URL				    |
+|  http://arduino.esp8266.com/stable/package_esp8266com_index.json  |
++-------------------------------------------------------------------+
++--------------------------------------------------------------------------------------+
+|    #In android studio replace my google-services.json to your google-services.json   |
+|    #In arduino insert your firebase host, auth, wifi ssid, and wifi password.        |
++--------------------------------------------------------------------------------------+
++--------------------------------------+
+| https://console.firebase.google.com  |
++--------------------------------------+
